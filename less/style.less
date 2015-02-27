@@ -1,0 +1,111 @@
+@import "reset.less";
+
+body {
+	background: white;
+}
+
+@font-face {
+    font-family: 'aleo';
+    src: url('../font/aleo.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@greyBorder: 1px solid grey;
+@defaultPadding: 10px;
+
+.widget.quote {
+	border:@greyBorder;
+	margin: 5px;
+
+	.quote-header {
+		border-bottom: @greyBorder;
+		height: 70px;
+		overflow: hidden;
+		position: relative;
+			
+		img {
+			display: inline-block;
+			float: right;
+		
+			border-left: @greyBorder;
+			max-height: 50px;
+			padding: @defaultPadding;
+		}
+	
+		h2 {
+			font-family: 'aleo';
+			box-sizing: border-box;
+			display: inline-block;
+			float:left;
+			font-size: 25px;
+			height: 100%;
+			padding: @defaultPadding;
+		}
+	}
+
+	.quote-price{
+		padding: @defaultPadding;
+		position: relative;
+		
+		h3 {
+			display: block;
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+		label {
+			display: block;
+		}
+		h3, label {
+			@media (max-width: 250px) {
+				visibility: hidden;
+			}
+		}
+
+		span{
+			color: orange;
+			display: block;
+			font-size: 30px;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+	}
+
+	.quote-contact{
+		padding: @defaultPadding;
+		background: rgb(38,38,38);
+		background-image: url(../images/border-separator.png);
+		background-repeat: repeat-x;
+
+		text-align: center;
+
+		button {
+			background: linear-gradient(rgb(94,170,22), rgb(57,135,0));
+    		border-style: solid;
+    		border-color: green;
+    		border-width: 0px;
+    		border-radius: 5px;
+    		box-shadow: 0px 2px 3px rgb(35,35,35);
+    		color: white;
+    		padding: @defaultPadding;
+    		
+		}
+	}
+
+	.quote-description{
+		padding: @defaultPadding;
+
+		h3{
+			display: block;
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+		p {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}
